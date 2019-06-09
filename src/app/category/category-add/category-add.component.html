@@ -1,0 +1,41 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-left text-muted mb-3">Category Create</h3>
+        <hr>
+        <form [formGroup]="categoryAddForm" (ngSubmit)="add()">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label>Category Name</label>
+              <input type="text" class="form-control" id="CategoryName" formControlName="CategoryName" name="CategoryName" placeholder="Category Name">
+              <span class="help-blok"
+              *ngIf="categoryAddForm.get('CategoryName').hasError('required') && categoryAddForm.get('CategoryName').touched">
+              Kategori Adı Girilmesi Zorunludur!
+            </span>
+            </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group col-md-12">
+                  <label >Order</label>
+                  <input type="text" class="form-control" id="Order" formControlName="Order" name="Order" placeholder="Order">
+                  <span class="help-blok"
+                  *ngIf="categoryAddForm.get('Order').hasError('required') && categoryAddForm.get('Order').touched">
+                  Sıra No Girilmesi Zorunludur!
+                </span>
+                </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12 form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="IsActive" formControlName="IsActive" name="IsActive">
+              <label class="form-check-label" for="defaultCheck1">
+                  Is Active
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-outline-primary" [disabled]="!categoryAddForm.valid">Create</button>
+          <h6>{{categoryAddForm.value|json}}</h6>
+          <h6>{{categoryAddForm.status|json}}</h6>
+        </form>
+      </div>
+    </div>
+  </div>

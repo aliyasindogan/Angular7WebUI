@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-12">
+      <h3 class="text-left text-muted mb-3">Category Edit</h3>
+      <hr>
+      <form [formGroup]="editForm" (ngSubmit)="update()">
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Category Name</label>
+            <input type="text" class="form-control" id="CategoryName" formControlName="CategoryName" name="CategoryName" placeholder="Category Name">
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label >Order</label>
+                <input type="text" class="form-control" id="Order" formControlName="Order" name="Order" placeholder="Order">
+              </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-12 form-check form-check-inline">
+            <!-- <label for="IsActive">IsActive</label>
+            <input type="checkbox" class="form-control" id="IsActive" formControlName="IsActive" name="IsActive" placeholder="IsActive"> -->
+            <input class="form-check-input" type="checkbox" value="" id="IsActive" formControlName="IsActive" name="IsActive">
+            <label class="form-check-label" for="IsActive">
+                Is Active
+            </label>
+          </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary" >Edit</button>
+      </form>
+    </div>
+  </div>
+</div>

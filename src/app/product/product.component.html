@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <h3 class="text-left text-muted mb-3">Product List</h3>
+  <a routerLink="/productCreate" class="btn btn-outline-success btn-sm">Create</a>
+<hr>
+  <table class="table table-hover table-bordered">
+    <tr>
+      
+      <th>Product Name</th>
+      <th>Category Name</th>
+      <th>Price</th>
+      <th>Unit In Stock</th>
+      <th>Price Vat</th>
+      <th class="text-center">---</th>
+    </tr>
+    <tr *ngFor="let value of products">
+      <td>{{value.ProductName}}</td>
+      <td>{{value.CategoryName}}</td>
+      <td>{{value.Price}}</td>
+      <td>{{value.UnitInStock}}</td>
+      <td>{{value.PriceVat}}</td>
+      <td>
+        <a routerLink="/productDetail/{{value.ProductID}}"  class="btn btn-outline-primary btn-sm mr-2">Detail</a> 
+        <a routerLink="/productEdit/{{value.ProductID}}" class="btn btn-outline-info btn-sm mr-2">Edit</a>
+        <a routerLink="/productDelete/{{value.ProductID}}" class="btn btn-outline-danger btn-sm">Delete</a>
+      </td>
+    </tr>
+  </table>
+  </div>
