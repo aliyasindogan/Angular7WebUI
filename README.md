@@ -1,4 +1,4 @@
-# Angular7WebUI
+# Angular 7 Web UI
 Merhaba, Projeyi indirdikten sonra terminalden npm install yazdıp enter yaptıktan sonra
 package.json dosyasına bakar ve gerekli tüm dosyaları buluttan indirir ve hepsini yeni bir node_modules dizine yerleştirir.
 
