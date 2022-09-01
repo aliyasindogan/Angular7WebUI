@@ -24,4 +24,4 @@ Faydalı olması dileğiyle.
 
 Allah cc Emanet Olun.
 
-Ali Yasin DOĞAN | .Net Software Developer
+Ali Yasin DOĞAN | .Net Developer
